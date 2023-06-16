@@ -20,10 +20,12 @@ What changed in this PR?
 - [ ] Have you updated any usage of changed tokens?
 - [ ] Have you updated the docs with any component changes?
 - [ ] Have you updated the dependency graph with any component changes?
-- [ ] Have you run linters?
-- [ ] Have you run prettier?
-- [ ] Have you tried building the css?
-- [ ] Have you tried building storybook?
+- [ ] Have you checked for any layer changes?
+- [ ] Have you run `npm run sanity-check`?
+  - [ ] Have you run linters?
+  - [ ] Have you run prettier?
+  - [ ] Have you tried building the css?
+  - [ ] Have you tried building storybook?
 - [ ] Do you need to update the package version?
 
 ## Screenshots
