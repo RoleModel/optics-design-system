@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Overview/Layers" />
+
+# Layers
+
+[CSS @layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer) is used to declare a cascade layer and can also be used to define the order of precendence in case of multiple layers.
+
+In Optics, each section of the application has been split into different layers. This allows us to have a clear separation of concerns and also allows us to have a clear understanding of the cascade order and what takes prescedent.
+
+Optics uses the following order of layers going from least to most prescedent `@layer reset, default, layout, components, utilities;`
+
+## Reset
+
+`@layer reset { ... }`
+
+This layer contains all css related to resetting the browser defaults. Since we rely on Modern CSS Reset, this layer only contains the import to pull in that code.
+
+See more about the base reset [Here](?path=/docs/overview-base-reset--docs)
+
+## Default
+
+`@layer default { ... }`
+
+The default layer contains Optics local base styles. This layer can also be utilized in your application to add any base styles that you wish to apply, but have a lower prescedent than any component.
+
+For instance, if you want all `a` tags within a table to have a certain color, you would normally write:
+
+```css
+%table-global {
+  td a {
+    color: green;
+  }
+}
+```
+
+This however will interfere and cause the button component used on an `a` tag like `<a href='#' class='btn'>example</a>` to also become green. This may be unexpected since you are generally styling a tags vs a specifically named `.btn` class, but since `.table td a` has a higher specificity than `.btn`, it causes issues. See [MDN Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to understand CSS Specificity.
+
+To solve this, we can move our style change into the default layer so it will still apply to normal `a` tags, but will have lower cascade prescedent than the `.btn` class which is in the component layer.
+
+```css
+@layer default {
+  %table-global {
+    td a {
+      color: green;
+    }
+  }
+}
+```
+
+## Layout
+
+`@layer layout { ... }`
+
+The layout layer contains all styles related to the layout of the application. See [Layout](?path=/docs/recipes-layout--docs) for more details on the specific classes.
+
+## Components
+
+`@layer components { ... }`
+
+All components live within the components layer. See the components section of the docs for more details on the specific classes.
+
+## Utilities
+
+`@layer utilities { ... }`
+
+The utilities layer contains all utility classes. See the utilities section of the docs for more details on the specific classes.

@@ -13,10 +13,15 @@ By default, when you import the design system, it will include the basics. CSS r
 @import '@rolemodel/optics/dist/scss/optics';
 ```
 
-If your application doesn't need all styles provided, you can import only the files you need like this:
+If your application doesn't need all styles provided, you can import only the files you need, however you will need to establish the cascade layers since normally to single import file handles that.
 
 ```css
-@import 'modern-css-reset/dist/reset';
+@layer reset, default, layout, components, utilities;
+
+// Third party Vendors
+@layer reset {
+  @import 'modern-css-reset/dist/reset';
+}
 
 @import 'core/tokens';
 
@@ -32,7 +37,12 @@ If your application doesn't need all styles provided, you can import only the fi
 Or this:
 
 ```css
-@import 'modern-css-reset/dist/reset';
+@layer reset, default, layout, components, utilities;
+
+// Third party Vendors
+@layer reset {
+  @import 'modern-css-reset/dist/reset';
+}
 
 @import 'base_tokens';
 @import 'scale_color_tokens';

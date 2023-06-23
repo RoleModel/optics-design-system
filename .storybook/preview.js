@@ -19,6 +19,7 @@ const preview = {
             'Introduction',
             'Base Reset',
             'Organization',
+            'Layers',
             'Selective Imports',
             'Tokens',
             'Themes',

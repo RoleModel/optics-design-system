@@ -1,5 +1,9 @@
+@layer reset, default, layout, components, utilities;
+
 // Third party Vendors
-@import 'modern-css-reset/dist/reset';
+@layer reset {
+  @import 'modern-css-reset/dist/reset';
+}
 
 // Tokens
 @import 'core/tokens';

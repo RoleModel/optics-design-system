@@ -9,56 +9,56 @@
   // Basic Colors
 
   /**
-  * @tokens Basic Colors
-  * @presenter Color
-  */
+    * @tokens Basic Colors
+    * @presenter Color
+    */
   --op-color-white: hsl(0deg 100% 100%);
   --op-color-black: hsl(0deg 0% 0%);
 
   /**
-  * @tokens Primary Colors
-  * @presenter Color
-  */
+    * @tokens Primary Colors
+    * @presenter Color
+    */
   --op-color-primary-h: 216;
   --op-color-primary-s: 58%;
   --op-color-primary-l: 48%;
 
   /**
-  * @tokens Neutral Colors
-  * @presenter Color
-  */
+    * @tokens Neutral Colors
+    * @presenter Color
+    */
   --op-color-neutral-h: var(--op-color-primary-h);
   --op-color-neutral-s: 4%;
   --op-color-neutral-l: var(--op-color-primary-l);
 
   /**
-  * @tokens Alerts Warning Colors
-  * @presenter Color
-  */
+    * @tokens Alerts Warning Colors
+    * @presenter Color
+    */
   --op-color-alerts-warning-h: 47;
   --op-color-alerts-warning-s: 100%;
   --op-color-alerts-warning-l: 61%;
 
   /**
-  * @tokens Alerts Danger Colors
-  * @presenter Color
-  */
+    * @tokens Alerts Danger Colors
+    * @presenter Color
+    */
   --op-color-alerts-danger-h: 0;
   --op-color-alerts-danger-s: 99%;
   --op-color-alerts-danger-l: 76%;
 
   /**
-  * @tokens Alerts Info Colors
-  * @presenter Color
-  */
+    * @tokens Alerts Info Colors
+    * @presenter Color
+    */
   --op-color-alerts-info-h: 216;
   --op-color-alerts-info-s: 58%;
   --op-color-alerts-info-l: 48%;
 
   /**
-  * @tokens Alerts Notice Colors
-  * @presenter Color
-  */
+    * @tokens Alerts Notice Colors
+    * @presenter Color
+    */
   --op-color-alerts-notice-h: 130;
   --op-color-alerts-notice-s: 61%;
   --op-color-alerts-notice-l: 64%;
@@ -71,9 +71,9 @@
 // https://bholmes.dev/blog/alternative-to-css-variable-media-queries/
 @mixin breakpoints {
   /**
-  * @tokens Breakpoints
-  * @presenter Spacing
-  */
+    * @tokens Breakpoints
+    * @presenter Spacing
+    */
   --op-breakpoint-x-small: 512px; // vertical phone
   --op-breakpoint-small: 768px; // vertical ipad
   --op-breakpoint-medium: 1024px; // landscape ipad
@@ -89,9 +89,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin border-radius {
   /**
-  * @tokens Border Radius
-  * @presenter BorderRadius
-  */
+    * @tokens Border Radius
+    * @presenter BorderRadius
+    */
   --op-radius-small: 2px;
   --op-radius-medium: 4px;
   --op-radius-large: 8px;
@@ -103,9 +103,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin border-widths {
   /**
-  * @tokens Border Width
-  * @presenter Spacing
-  */
+    * @tokens Border Width
+    * @presenter Spacing
+    */
   --op-border-width: 1px;
   --op-border-width-large: 2px;
   --op-border-width-x-large: 4px;
@@ -113,9 +113,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin border-colors {
   /**
-  * @tokens Border Color
-  * @presenter Color
-  */
+    * @tokens Border Color
+    * @presenter Color
+    */
   --op-border-color: var(--op-color-neutral-plus-five);
 }
 
@@ -123,9 +123,9 @@ $breakpoint-x-large: 1440px; // medium laptop
   // E.G. box-shadow: var(--op-border-top) var(--op-border-color);
 
   /**
-  * @tokens Border Shadow
-  * @presenter Shadow
-  */
+    * @tokens Border Shadow
+    * @presenter Shadow
+    */
   --op-border-none: 0 0 0 0;
   --op-border-all: 0 0 0 var(--op-border-width);
   --op-border-top: 0 calc(-1 * var(--op-border-width)) 0 0;
@@ -138,9 +138,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin font-scales {
   /**
-  * @tokens Font Scale
-  * @presenter FontSize
-  */
+    * @tokens Font Scale
+    * @presenter FontSize
+    */
   --op-font-scale-unit: 1rem; // 10px;
   --op-font-2x-small: calc(var(--op-font-scale-unit) * 1); // 10px
   --op-font-x-small: calc(var(--op-font-scale-unit) * 1.2); // 12px
@@ -157,9 +157,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin font-weights {
   /**
-  * @tokens Font Weight
-  * @presenter FontWeight
-  */
+    * @tokens Font Weight
+    * @presenter FontWeight
+    */
   --op-font-weight-thin: 100;
   --op-font-weight-extra-light: 200;
   --op-font-weight-light: 300;
@@ -173,9 +173,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin line-heights {
   /**
-  * @tokens Line Height
-  * @presenter LineHeight
-  */
+    * @tokens Line Height
+    * @presenter LineHeight
+    */
   --op-line-height-none: 0;
   --op-line-height-densest: 1;
   --op-line-height-denser: 1.15;
@@ -188,17 +188,17 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin letter-spacing {
   /**
-  * @tokens Letter Spacing
-  * @presenter LetterSpacing
-  */
+    * @tokens Letter Spacing
+    * @presenter LetterSpacing
+    */
   --op-letter-spacing-navigation: 0.01rem;
   --op-letter-spacing-label: 0.04rem;
 }
 
 @mixin transitions {
   /**
-  * @tokens Transition
-  */
+    * @tokens Transition
+    */
   --op-transition-accordion: rotate 120ms ease-in;
   --op-transition-input: all 120ms ease-in;
   --op-transition-sidebar: all 200ms ease-in-out;
@@ -208,33 +208,33 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin animations {
   /**
-  * @tokens Animation
-  * @presenter Animation
-  */
+    * @tokens Animation
+    * @presenter Animation
+    */
   --op-animation-flash: rm-slide-in-out-flash 5s normal forwards;
 }
 
 @mixin encoded-images {
   /**
-  * @tokens Encoded Images
-  */
+    * @tokens Encoded Images
+    */
   --op-encoded-images-dropdown-arrow-width: var(--op-space-scale-unit); // No way to string interpolate
   --op-encoded-images-dropdown-arrow: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 7' version='1.1' xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cg transform='matrix(0.983953,0,0,1.00934,-9.22679,-3.65885)'%3E%3Cpath fill='%23d1d1d1' d='M9.37727 3.625l5.08154 6.93523L19.54036 3.625'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 
 @mixin fonts {
   /**
-  * @tokens Font Family
-  * @presenter FontFamily
-  */
+    * @tokens Font Family
+    * @presenter FontFamily
+    */
   --op-font-family: 'Noto Sans', 'Noto Serif', sans-serif;
 }
 
 @mixin spacing-scales {
   /**
-  * @tokens Space Scale
-  * @presenter Spacing
-  */
+    * @tokens Space Scale
+    * @presenter Spacing
+    */
   --op-space-scale-unit: 1rem; // 10px;
   --op-space-3x-small: calc(var(--op-space-scale-unit) * 0.2); // 2px
   --op-space-2x-small: calc(var(--op-space-scale-unit) * 0.4); // 4px
@@ -250,9 +250,9 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin shadows {
   /**
-  * @tokens Shadows
-  * @presenter Shadow
-  */
+    * @tokens Shadows
+    * @presenter Shadow
+    */
   --op-shadow-x-small: 0 1px 2px hsl(0deg 0% 0% / 3%), 0 1px 3px hsl(0deg 0% 0% / 15%);
   --op-shadow-small: 0 1px 2px hsl(0deg 0% 0% / 3%), 0 2px 6px hsl(0deg 0% 0% / 15%);
   --op-shadow-medium: 0 4px 8px hsl(0deg 0% 0% / 15%), 0 1px 3px hsl(0deg 0% 0% / 3%);
@@ -262,8 +262,8 @@ $breakpoint-x-large: 1440px; // medium laptop
 
 @mixin z-indexes {
   /**
-  * @tokens Z-Index
-  */
+    * @tokens Z-Index
+    */
   --op-z-index-header: 500;
   --op-z-index-footer: 500;
   --op-z-index-drawer: 700;
@@ -280,18 +280,18 @@ $breakpoint-x-large: 1440px; // medium laptop
   // https: //uxdesign.cc/baseline-grids-design-systems-ae23b5af8cec See example 8
 
   /**
-  * @tokens Input Heights
-  * @presenter Spacing
-  */
+    * @tokens Input Heights
+    * @presenter Spacing
+    */
   --op-input-height-small: 2.8rem; // 28px
   --op-input-height-medium: 3.6rem; // 36px
   --op-input-height-large: 4rem; // 40px
   --op-input-height-x-large: 8.4rem; // 84px
 
   /**
-  * @tokens Input Focus
-  * @presenter Shadow
-  */
+    * @tokens Input Focus
+    * @presenter Shadow
+    */
   --op-input-inner-focus: inset 0 0 0 var(--op-border-width-large);
   --op-input-outer-focus: 0 0 0 var(--op-border-width-x-large);
   --op-input-focus-primary: var(--op-input-inner-focus) var(--op-color-primary-plus-two),
