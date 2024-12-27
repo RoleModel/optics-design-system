@@ -7,16 +7,10 @@
 /* Tokens */
 @import 'core/tokens/index.css';
 
-/* Base */
+/* Base styles and utilities */
 @import 'core/base.css';
-
-/* Layout */
-
-/* core/layout */
-
-/* Utilities */
-
-/* core/utilities */
+@import 'core/layout.css';
+@import 'core/utilities.css';
 
 /* Components */
 

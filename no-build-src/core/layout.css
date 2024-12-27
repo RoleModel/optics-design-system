@@ -1,0 +1,17 @@
+html {
+  overflow: hidden; /* Needed to prevent flash messages and panels from causing overflow */
+
+  body {
+    overflow: auto;
+    height: 100vh;
+  }
+}
+
+html[data-layout='disable'] {
+  overflow: unset;
+
+  body {
+    overflow: unset;
+    height: unset;
+  }
+}
