@@ -13,5 +13,4 @@
 @import 'core/utilities.css';
 
 /* Components */
-
-/* components/* */
+@import 'components/index.css';
