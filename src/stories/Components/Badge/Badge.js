@@ -11,9 +11,11 @@ export const createBadge = ({
   const badge = document.createElement('div')
   badge.innerText = label
 
-  badge.className = [style === 'default' ? 'badge' : `badge-${style}`, pill ? 'badge--pill' : '']
-    .filter(Boolean)
-    .join(' ')
+  badge.className = [
+    'badge',
+    `badge--${style}`,
+    pill ? 'badge--pill' : ''
+  ].filter(Boolean).join(' ')
 
   if (showPrefixIcon) {
     badge.prepend(createIcon({ name: 'open_in_new' }))
