@@ -8,8 +8,7 @@
 @import 'core/tokens/index.css';
 
 /* Base */
-
-/* core/base/ */
+@import 'core/base.css';
 
 /* Layout */
 

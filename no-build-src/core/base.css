@@ -1,0 +1,96 @@
+/* After a reset, introduce base element styles specific to this system */
+
+html {
+  font-family: var(--op-font-family);
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  background: var(--op-color-background);
+  color: var(--op-color-on-background);
+  font-size: var(--op-font-medium);
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+button,
+input[type='submit'] {
+  border: 0;
+}
+
+label {
+  display: inline-block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+a:not([class]) {
+  color: var(--op-color-primary-original);
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: var(--op-space-small);
+  font-weight: var(--op-font-weight-normal);
+}
+
+h1 {
+  font-size: var(--op-font-3x-large);
+}
+
+h2 {
+  font-size: var(--op-font-2x-large);
+}
+
+h3 {
+  font-size: var(--op-font-large);
+}
+
+h4 {
+  font-size: var(--op-font-medium);
+}
+
+h5 {
+  font-size: var(--op-font-small);
+}
+
+h6 {
+  font-size: var(--op-font-x-small);
+}
+
+p {
+  margin-bottom: var(--op-space-small);
+  font-size: var(--op-font-medium);
+}
+
+small {
+  font-size: var(--op-font-small);
+}
+
+strong {
+  font-weight: var(--op-font-weight-bold);
+}
