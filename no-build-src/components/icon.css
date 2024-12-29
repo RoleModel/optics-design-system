@@ -1,0 +1,129 @@
+/*
+  Look up icons at: https://fonts.google.com/icons?icon.set=Material+Symbols
+  Instead of hosting the font files locally which requires the compiler to handle them, we pull the icons
+  from Googles CDN like we do for our other fonts. This does have downsides. For instance,
+  the font files are large so on first load, there will be a flash of unstyled space where the text is.
+  Changing the import to not use the variable version of the font would fix this, but there is a tradeoff
+  as we would lose the ability to choose fill, weight, optical size, and ephasis. For more information on
+  the variable font, see:
+  https://developers.google.com/fonts/docs/material_symbols#variable_font_with_google_fonts
+*/
+
+/* Class provided by the Google Fonts CDN */
+
+.material-symbols-outlined,
+.custom-icon {
+  /* Configurable API */
+
+  /* Weight */
+  --_op-icon-weight-light: var(--op-font-weight-light);
+  --_op-icon-weight-normal: var(--op-font-weight-normal);
+  --_op-icon-weight-semi-bold: var(--op-font-weight-semi-bold);
+  --_op-icon-weight-bold: var(--op-font-weight-bold);
+
+  /* Fill */
+  --_op-icon-fill-outlined: 0;
+  --_op-icon-fill-filled: 1;
+
+  /* Emphasis */
+  --_op-icon-emphasis-low: -20;
+  --_op-icon-emphasis-normal: 0;
+  --_op-icon-emphasis-high: 200;
+
+  /* Size */
+  --_op-icon-font-size-small: var(--op-font-small);
+  --_op-icon-font-size-medium: var(--op-font-medium);
+  --_op-icon-font-size-large: var(--op-font-large);
+  --_op-icon-font-size-x-large: var(--op-font-2x-large);
+  --_op-icon-optical-size-small: 20;
+  --_op-icon-optical-size-medium: 20;
+  --_op-icon-optical-size-large: 40;
+  --_op-icon-optical-size-x-large: 48;
+
+  /* Internal API (generally not meant to be overridden) */
+  --__op-icon-weight: var(--_op-icon-weight-normal);
+  --__op-icon-fill: var(--_op-icon-fill-outlined);
+  --__op-icon-emphasis: var(--_op-icon-emphasis-normal);
+  --__op-icon-font-size: var(--_op-icon-font-size-medium);
+  --__op-icon-optical-size: var(--_op-icon-optical-size-medium);
+
+  font-size: var(--__op-icon-font-size);
+  font-variation-settings:
+    'FILL' var(--__op-icon-fill),
+    'wght' var(--__op-icon-weight),
+    'GRAD' var(--__op-icon-emphasis),
+    'opsz' var(--__op-icon-optical-size);
+  line-height: var(--op-line-height-densest);
+  vertical-align: middle;
+
+  /* Fill Modifiers */
+  &.icon--outlined {
+    --__op-icon-fill: var(--_op-icon-fill-outlined);
+  }
+
+  &.icon--filled {
+    --__op-icon-fill: var(--_op-icon-fill-filled);
+  }
+
+  /* Weight Modifiers */
+  &.icon--weight-light {
+    --__op-icon-weight: var(--_op-icon-weight-light);
+  }
+
+  &.icon--weight-normal {
+    --__op-icon-weight: var(--_op-icon-weight-normal);
+  }
+
+  &.icon--weight-semi-bold {
+    --__op-icon-weight: var(--_op-icon-weight-semi-bold);
+  }
+
+  &.icon--weight-bold {
+    --__op-icon-weight: var(--_op-icon-weight-bold);
+  }
+
+  /* Emphasis */
+  &.icon--low-emphasis {
+    --__op-icon-emphasis: var(--_op-icon-emphasis-low);
+  }
+
+  &.icon--normal-emphasis {
+    --__op-icon-emphasis: var(--_op-icon-emphasis-normal);
+  }
+
+  &.icon--high-emphasis {
+    --__op-icon-emphasis: var(--_op-icon-emphasis-high);
+  }
+
+  /* Size Modifiers */
+  &.icon--small {
+    --__op-icon-font-size: var(--_op-icon-font-size-small);
+    --__op-icon-optical-size: var(--_op-icon-optical-size-small);
+  }
+
+  &.icon--medium {
+    --__op-icon-font-size: var(--_op-icon-font-size-medium);
+    --__op-icon-optical-size: var(--_op-icon-optical-size-medium);
+  }
+
+  &.icon--large {
+    --__op-icon-font-size: var(--_op-icon-font-size-large);
+    --__op-icon-optical-size: var(--_op-icon-optical-size-large);
+  }
+
+  &.icon--x-large {
+    --__op-icon-font-size: var(--_op-icon-font-size-x-large);
+    --__op-icon-optical-size: var(--_op-icon-optical-size-x-large);
+  }
+}
+
+.custom-icon {
+  display: inline-block;
+  width: var(--__op-icon-font-size);
+  height: var(--__op-icon-font-size);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
