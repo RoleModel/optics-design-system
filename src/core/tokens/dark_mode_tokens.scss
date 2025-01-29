@@ -446,7 +446,7 @@
   --op-shadow-x-large: 0 8px 12px hsl(0deg 0% 0% / 15%), 0 4px 4px hsl(0deg 0% 0% / 30%);
 }
 
-@mixin encoded-images {
+@mixin encoded-images-dark {
   /**
   * @tokens Encoded Images
   */
@@ -463,7 +463,7 @@
   @include alerts-notice-semantic-scale-dark;
 
   @include shadows-dark;
-  @include encoded-images;
+  @include encoded-images-dark;
 }
 
 // Follow system preference unless forced to light

@@ -6,11 +6,10 @@
   gap: var(--op-space-small);
 
   .alert__icon {
-    /* stylelint-disable scss/at-extend-no-missing-placeholder */
-    @extend .icon--large;
-    @extend .icon--weight-bold;
-    /* stylelint-enable scss/at-extend-no-missing-placeholder */
+    --op-mso-optical-sizing: 40;
+    --op-mso-weight: var(--op-font-weight-bold);
 
+    font-size: var(--op-font-large);
     line-height: var(--op-line-height-dense);
   }
 

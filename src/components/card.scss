@@ -1,3 +1,5 @@
+@use '../core/tokens/base_tokens.scss';
+
 %card-global {
   position: relative;
   border-radius: var(--op-radius-medium);
@@ -10,7 +12,7 @@
 
   // Modifiers
   &.card--condensed {
-    @include spacing-scales;
+    @include base_tokens.spacing-scales;
 
     --op-space-scale-unit: 0.5rem;
   }

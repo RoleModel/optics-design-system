@@ -1,10 +1,17 @@
-@import './src/optics';
+/* stylelint-disable no-duplicate-selectors, no-descending-specificity, custom-property-pattern */
 
-@import './src/recipes/domains-sidebar';
-@import './src/recipes/16six-sidebar';
-@import './src/recipes/aligned-header';
+@use './src/optics' as *;
+
+@use './src/recipes/domains-sidebar' as *;
+@use './src/recipes/16six-sidebar' as *;
+@use './src/recipes/aligned-header' as *;
 
 @import 'https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap';
+
+// Allow the "Show Code" button to appear above the footer in examples.
+.docs-story div:last-child {
+  z-index: 1;
+}
 
 .sbdocs.sbdocs-wrapper {
   --toc-size: 20rem;

@@ -1,3 +1,5 @@
+@use '../core/tokens/base_tokens.scss';
+
 %btn-global {
   // Public API (allowed to be overridden)
   --_op-btn-height-small: var(--op-input-height-small);
@@ -91,7 +93,7 @@
   }
 
   // https://uxmovement.com/mobile/optimal-size-and-spacing-for-mobile-buttons/
-  @media (max-width: $breakpoint-small) {
+  @media (max-width: base_tokens.$breakpoint-small) {
     --__op-btn-height: var(--_op-btn-height-large);
     --__op-btn-font-size: var(--_op-btn-font-large);
 

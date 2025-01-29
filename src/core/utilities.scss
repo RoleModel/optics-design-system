@@ -1,3 +1,5 @@
+@use './tokens/base_tokens.scss';
+
 // Container Properties
 
 .container {
@@ -448,7 +450,7 @@
     flex: 1;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: base_tokens.$breakpoint-small) {
     // Use flex wrapping strategy instead of responsive wrapping at sm breakpoint.
     &:not(.flex-wrap) {
       flex-direction: column;
@@ -539,7 +541,7 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: base_tokens.$breakpoint-small) {
     &:not(.flex-no-wrap) {
       flex-direction: column;
 

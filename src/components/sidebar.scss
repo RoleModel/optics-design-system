@@ -1,3 +1,5 @@
+@use '../core/tokens/base_tokens.scss';
+
 @mixin sidebar-rail-global {
   // Private API
   --__op-sidebar-width: var(--_op-sidebar-rail-width);
@@ -102,10 +104,10 @@
       justify-content: flex-start;
 
       .material-symbols-outlined {
-        /* stylelint-disable scss/at-extend-no-missing-placeholder */
-        @extend .icon--large;
-        @extend .icon--weight-bold;
-        /* stylelint-enable scss/at-extend-no-missing-placeholder */
+        --op-mso-optical-sizing: 40;
+        --op-mso-weight: var(--op-font-weight-bold);
+
+        font-size: var(--op-font-large);
       }
     }
 
@@ -133,11 +135,11 @@
   }
 
   &.sidebar--drawer.sidebar--responsive {
-    @media (width > $breakpoint-medium) {
+    @media (width > base_tokens.$breakpoint-medium) {
       @include sidebar-drawer-global;
     }
 
-    @media (width <= $breakpoint-medium) {
+    @media (width <= base_tokens.$breakpoint-medium) {
       @include sidebar-rail-global;
     }
   }
@@ -148,11 +150,11 @@
   }
 
   &.sidebar--compact.sidebar--responsive {
-    @media (width > $breakpoint-medium) {
+    @media (width > base_tokens.$breakpoint-medium) {
       @include sidebar-compact-global;
     }
 
-    @media (width <= $breakpoint-medium) {
+    @media (width <= base_tokens.$breakpoint-medium) {
       @include sidebar-rail-global;
     }
   }
